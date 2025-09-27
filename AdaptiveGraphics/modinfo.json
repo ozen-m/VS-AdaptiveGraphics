@@ -1,0 +1,15 @@
+{
+  "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+  "name": "Adaptive Graphics",
+  "description": "Automatically change the graphic settings based on a target FPS",
+  "authors": [
+    "ozen"
+  ],
+  "modid": "adaptivegraphics",
+  "version": "0.0.1",
+  "type": "Code",
+  "side": "Client",
+  "dependencies": {
+    "game": "1.21.0"
+  }
+}

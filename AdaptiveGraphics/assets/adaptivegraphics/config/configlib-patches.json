@@ -1,0 +1,244 @@
+{
+  "version": 0,
+  "file": "AdaptiveGraphics.json",
+  "patches": {},
+  "settings": [
+    {
+      "type": "separator",
+      "title": "General"
+    },
+    {
+      "code": "Enabled",
+      "comment": "EnabledComment",
+      "type": "boolean",
+      "default": true,
+      "weight": "1.1"
+    },
+    {
+      "code": "ShowFPS",
+      "comment": "ShowFPSComment",
+      "type": "boolean",
+      "default": true,
+      "weight": "1.2"
+    },
+    {
+      "code": "TargetFPS",
+      "comment": "TargetFPSComment",
+      "type": "integer",
+      "default": 120,
+      "weight": "1.3",
+      "range": {
+        "min": 30,
+        "max": 360
+      }
+    },
+    {
+      "code": "ToleranceFPS",
+      "comment": "ToleranceFPSComment",
+      "type": "integer",
+      "default": 10,
+      "weight": "1.4",
+      "range": {
+        "min": 2,
+        "max": 20
+      }
+    },
+    {
+      "code": "AllowLastResort",
+      "comment": "AllowLastResortComment",
+      "type": "boolean",
+      "default": true,
+      "weight": "1.5"
+    },
+    {
+      "type": "separator",
+      "title": "Graphics"
+    },
+    {
+      "code": "MinViewDistance",
+      "comment": "MinViewDistanceComment",
+      "type": "integer",
+      "default": 256,
+      "weight": "2.1",
+      "range": {
+        "min": 32,
+        "max": 1536,
+        "step": 32
+      }
+    },
+    {
+      "code": "MaxViewDistance",
+      "comment": "MaxViewDistanceComment",
+      "type": "integer",
+      "default": 1024,
+      "weight": "2.2",
+      "range": {
+        "min": 32,
+        "max": 1536,
+        "step": 32
+      }
+    },
+    {
+      "code": "ViewDistanceStep",
+      "comment": "ViewDistanceStepComment",
+      "type": "integer",
+      "default": 96,
+      "weight": "2.3",
+      "range": {
+        "min": 32,
+        "max": 256,
+        "step": 32
+      }
+    },
+    {
+      "code": "AllowChangeShaderSettings",
+      "comment": "AllowChangeShaderSettingsComment",
+      "type": "boolean",
+      "default": true,
+      "weight": "2.4"
+    },
+    {
+      "code": "AllowChangeShaderShadowSettings",
+      "comment": "AllowChangeShaderShadowSettingsComment",
+      "type": "boolean",
+      "default": true,
+      "weight": "2.5"
+    },
+    {
+      "code": "BaseShadowQuality",
+      "comment": "BaseShadowQualityComment",
+      "type": "integer",
+      "default": 2,
+      "weight": "2.6",
+      "range": {
+        "min": 0,
+        "max": 4
+      }
+    },
+    {
+      "code": "MaxShadowQuality",
+      "comment": "MaxShadowQualityComment",
+      "type": "integer",
+      "default": 3,
+      "weight": "2.7",
+      "range": {
+        "min": 0,
+        "max": 4
+      }
+    },
+    {
+      "code": "AllowChangeShaderSSAOSettings",
+      "comment": "AllowChangeShaderSSAOSettingsComment",
+      "type": "boolean",
+      "default": false,
+      "weight": "2.8"
+    },
+    {
+      "code": "BaseSSAOQuality",
+      "comment": "BaseSSAOQualityComment",
+      "type": "integer",
+      "default": 1,
+      "weight": "2.9",
+      "range": {
+        "min": 0,
+        "max": 4
+      }
+    },
+    {
+      "code": "MaxSSAOQuality",
+      "comment": "MaxSSAOQualityComment",
+      "type": "integer",
+      "default": 2,
+      "weight": "2.10",
+      "range": {
+        "min": 0,
+        "max": 2
+      }
+    },
+    {
+      "type": "separator",
+      "title": "Advanced"
+    },
+    {
+      "type": "separator",
+      "title": "Advanced2"
+    },
+    {
+      "code": "FpsSampleDuration",
+      "comment": "FpsSampleDurationComment",
+      "type": "integer",
+      "default": 5,
+      "weight": "3.1",
+      "range": {
+        "min": 3,
+        "max": 45
+      }
+    },
+    {
+      "code": "FpsTrendDuration",
+      "comment": "FpsTrendDurationComment",
+      "type": "integer",
+      "default": 3,
+      "weight": "3.2",
+      "range": {
+        "min": 2,
+        "max": 15
+      }
+    },
+    {
+      "code": "OutlierTolerance",
+      "comment": "OutlierToleranceComment",
+      "type": "float",
+      "default": 0.10,
+      "weight": "3.3",
+      "range": {
+        "min": 0.01,
+        "max": 0.4
+      }
+    },
+    {
+      "code": "SettleInitial",
+      "comment": "SettleInitialComment",
+      "type": "integer",
+      "default": 30,
+      "weight": "3.4",
+      "range": {
+        "min": 10,
+        "max": 120
+      }
+    },
+    {
+      "code": "SettleAfterAdjust",
+      "comment": "SettleAfterAdjustComment",
+      "type": "integer",
+      "default": 7,
+      "weight": "3.5",
+      "range": {
+        "min": 1,
+        "max": 60
+      }
+    },
+    {
+      "code": "SettleAfterPause",
+      "comment": "SettleAfterPauseComment",
+      "type": "integer",
+      "default": 0,
+      "weight": "3.6",
+      "range": {
+        "min": 0,
+        "max": 30
+      }
+    },
+    {
+      "code": "SamplingIntervalInterval",
+      "comment": "SamplingIntervalIntervalComment",
+      "type": "float",
+      "default": 0.5,
+      "weight": "3.6",
+      "range": {
+        "min": 0.01,
+        "max": 1
+      }
+    }
+  ]
+}
