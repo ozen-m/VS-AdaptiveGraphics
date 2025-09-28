@@ -51,6 +51,13 @@
       "weight": "1.5"
     },
     {
+      "code": "DebugLogs",
+      "comment": "DebugLogsComment",
+      "type": "boolean",
+      "default": true,
+      "weight": "1.6"
+    },
+    {
       "type": "separator",
       "title": "Graphics"
     },

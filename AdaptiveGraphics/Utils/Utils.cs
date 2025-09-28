@@ -59,14 +59,14 @@ namespace AdaptiveGraphics
 
         public static void LogDebug(string msg)
         {
+            if (!AdaptiveGraphicsModSystem.Config.DebugLogs) return;
 #if DEBUG
             AdaptiveGraphicsModSystem.Logger.Debug("[Adaptive Graphics] " + msg);
-            return;
         }
 #endif
 #if RELEASE // FOR TESTING PURPOSES
             AdaptiveGraphicsModSystem.Logger.Notification("[Adaptive Graphics Debug] " + msg);
-            return; }
+        }
 #endif
     }
 }

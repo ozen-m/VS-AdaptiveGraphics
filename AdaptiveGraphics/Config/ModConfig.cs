@@ -10,6 +10,7 @@ public class ModConfig
     public int TargetFPS { get; set; } = 120;
     public int ToleranceFPS { get; set; } = 10;
     public bool AllowLastResort { get; set; } = true;
+    public bool DebugLogs { get; set; } = true;
 
     // --- Graphics Config ---
     // View Distance 32-1536

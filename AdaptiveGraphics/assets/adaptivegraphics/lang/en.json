@@ -10,6 +10,8 @@
   "ToleranceFPSComment": "The lower/upper bounds target fps, dictates sensitivity to change",
   "AllowLastResort": "Allow Last Resort",
   "AllowLastResortComment": "If all options to lower settings have been exhausted, allow to lower each shader quality (SSAO, shadow) by one to try and achieve target fps",
+  "DebugLogs": "Debug Logs",
+  "DebugLogsComment": "Enable printing of debug logs in the console or log files",
   "Graphics": "Graphical Settings",
   "MinViewDistance": "Minimum View Distance",
   "MinViewDistanceComment": "The minimum view distance the mod can automatically adjust to",

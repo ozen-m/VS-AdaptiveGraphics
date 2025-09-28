@@ -12,15 +12,15 @@ namespace AdaptiveGraphics.Systems
 {
     public class AdaptiveGraphicsSystem
     {
-        protected static ICoreClientAPI capi;
+        private static ICoreClientAPI capi;
         protected readonly AdaptiveGraphicsHud fpsHud;
         protected readonly DummyRenderer dummyRenderer;
         protected ModConfig config;
 
         protected Queue<int> _fpsSamples;
         protected List<int> _fpsOutliers;
-        protected TimeSpan _settleForSeconds;
         protected Dictionary<string, (int settingMin, int settingMax)> _rangeTable;
+        protected TimeSpan _settleForSeconds;
         protected Stopwatch _timeSinceLastUpdate;
         protected Stopwatch _timeSinceLastEvaluate;
         protected Stopwatch _timeSinceLastSettle;
@@ -68,8 +68,8 @@ namespace AdaptiveGraphics.Systems
             _fpsTrendSize = (int)(config.FpsTrendDuration / config.SamplingInterval);
 
             (_lowerFpsThreshold, _upperFpsThreshold) = Utils.GetBounds(config.TargetFPS, config.ToleranceFPS);
-            _fpsSamples = new Queue<int>(_fpsSampleSize);
-            _fpsOutliers = new List<int>(_fpsTrendSize);
+            _fpsSamples ??= new Queue<int>(_fpsSampleSize);
+            _fpsOutliers ??= new List<int>(_fpsTrendSize);
             if (dummyRenderer != null)
             {
                 VerifyMaxViewDistance();
