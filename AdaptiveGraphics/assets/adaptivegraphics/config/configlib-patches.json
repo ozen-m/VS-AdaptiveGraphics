@@ -12,14 +12,16 @@
       "comment": "EnabledComment",
       "type": "boolean",
       "default": true,
-      "weight": "1.1"
+      "weight": "1.1",
+      "clientSide": true
     },
     {
       "code": "ShowFPS",
       "comment": "ShowFPSComment",
       "type": "boolean",
       "default": true,
-      "weight": "1.2"
+      "weight": "1.2",
+      "clientSide": true
     },
     {
       "code": "TargetFPS",
@@ -30,7 +32,8 @@
       "range": {
         "min": 30,
         "max": 360
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "ToleranceFPS",
@@ -41,21 +44,24 @@
       "range": {
         "min": 2,
         "max": 40
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "AllowLastResort",
       "comment": "AllowLastResortComment",
       "type": "boolean",
       "default": true,
-      "weight": "1.5"
+      "weight": "1.5",
+      "clientSide": true
     },
     {
       "code": "DebugLogs",
       "comment": "DebugLogsComment",
       "type": "boolean",
       "default": true,
-      "weight": "1.6"
+      "weight": "1.6",
+      "clientSide": true
     },
     {
       "type": "separator",
@@ -71,7 +77,8 @@
         "min": 32,
         "max": 1536,
         "step": 32
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "MaxViewDistance",
@@ -83,7 +90,8 @@
         "min": 32,
         "max": 1536,
         "step": 32
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "ViewDistanceStep",
@@ -95,21 +103,24 @@
         "min": 32,
         "max": 256,
         "step": 32
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "AllowChangeShaderSettings",
       "comment": "AllowChangeShaderSettingsComment",
       "type": "boolean",
       "default": true,
-      "weight": "2.4"
+      "weight": "2.4",
+      "clientSide": true
     },
     {
       "code": "AllowChangeShaderShadowSettings",
       "comment": "AllowChangeShaderShadowSettingsComment",
       "type": "boolean",
       "default": true,
-      "weight": "2.5"
+      "weight": "2.5",
+      "clientSide": true
     },
     {
       "code": "BaseShadowQuality",
@@ -120,7 +131,8 @@
       "range": {
         "min": 0,
         "max": 4
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "MaxShadowQuality",
@@ -131,14 +143,16 @@
       "range": {
         "min": 0,
         "max": 4
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "AllowChangeShaderSSAOSettings",
       "comment": "AllowChangeShaderSSAOSettingsComment",
       "type": "boolean",
       "default": false,
-      "weight": "2.8"
+      "weight": "2.8",
+      "clientSide": true
     },
     {
       "code": "BaseSSAOQuality",
@@ -149,7 +163,8 @@
       "range": {
         "min": 0,
         "max": 4
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "MaxSSAOQuality",
@@ -160,7 +175,8 @@
       "range": {
         "min": 0,
         "max": 2
-      }
+      },
+      "clientSide": true
     },
     {
       "type": "separator",
@@ -179,7 +195,8 @@
       "range": {
         "min": 3,
         "max": 45
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "AsymmetricPercentage",
@@ -190,7 +207,8 @@
       "range": {
         "min": 0,
         "max": 1
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "FpsTrendDuration",
@@ -201,7 +219,8 @@
       "range": {
         "min": 2,
         "max": 15
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "OutlierTolerance",
@@ -212,7 +231,8 @@
       "range": {
         "min": 0.01,
         "max": 0.4
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "SettleInitial",
@@ -223,7 +243,8 @@
       "range": {
         "min": 10,
         "max": 120
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "SettleAfterAdjust",
@@ -234,7 +255,8 @@
       "range": {
         "min": 1,
         "max": 60
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "SettleAfterPause",
@@ -245,7 +267,8 @@
       "range": {
         "min": 0,
         "max": 30
-      }
+      },
+      "clientSide": true
     },
     {
       "code": "SamplingIntervalInterval",
@@ -256,7 +279,8 @@
       "range": {
         "min": 0.01,
         "max": 1
-      }
+      },
+      "clientSide": true
     }
   ]
 }
