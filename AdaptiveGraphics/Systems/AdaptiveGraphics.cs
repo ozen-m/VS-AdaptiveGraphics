@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Vintagestory.API.Client;
+using Vintagestory.API.Config;
 using Vintagestory.Client;
 using Vintagestory.Client.NoObf;
 
@@ -75,6 +76,11 @@ namespace AdaptiveGraphics.Systems
                 VerifyMaxViewDistance();
             }
 
+            if (config.MinViewDistance > 512 || config.MaxViewDistance > 512)
+            {
+                Utils.LogWarning($"View Distance is set more than 512, {Lang.Get("vram-warning")}");
+            }
+
             _timeSinceLastUpdate = Stopwatch.StartNew();
             _timeSinceLastEvaluate = Stopwatch.StartNew();
             _timeSinceLastSettle = Stopwatch.StartNew();
@@ -104,7 +110,11 @@ namespace AdaptiveGraphics.Systems
                 _lastCurrFps = currentFps;
                 _frameCount = 0;
 
-                if (!config.Enabled) return;
+                if (!config.Enabled)
+                {
+                    _timeSinceLastUpdate.Restart();
+                    return;
+                }
 
                 if (IsPaused())
                 {
@@ -474,6 +484,7 @@ namespace AdaptiveGraphics.Systems
         /// </summary>
         public void ShowDebugStats()
         {
+            if (fpsHistory.Count < 1 || adjustments.Count < 1) return;
             var averageFps = fpsHistory.Average();
             Utils.LogDebug($"""
 
