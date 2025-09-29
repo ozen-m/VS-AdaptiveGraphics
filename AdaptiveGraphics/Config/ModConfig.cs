@@ -34,7 +34,7 @@ public class ModConfig
     public float OutlierTolerance { get; set; } = 0.1f; // percent
     public int SettleInitial { get; set; } = 30; // seconds
     public int SettleAfterAdjust { get; set; } = 7; // seconds
-    public int SettleAfterPause { get; set; } = 0; // seconds
+    public int SettleAfterPause { get; set; } = 1; // seconds
     public float SamplingInterval { get; set; } = 0.5f; // seconds
     public int Version { get; set; } = 0;
 }

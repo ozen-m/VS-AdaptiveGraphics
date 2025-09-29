@@ -119,7 +119,7 @@ namespace AdaptiveGraphics.Systems
 
                 if (IsPaused())
                 {
-                    ForceSettle(config.SettleAfterPause);
+                    ForceSettle(config.SettleAfterPause, false);
                 }
 
                 // Stats collection
@@ -362,9 +362,10 @@ namespace AdaptiveGraphics.Systems
         /// <summary>
         /// Pause from Evaluate()
         /// </summary>
-        /// <param name="seconds"></param>
+        /// <param name="seconds">How long to pause for</param>
+        /// <param name="clear">Should clear fps samples?</param>
         /// <exception cref="ArgumentException"></exception>
-        protected void ForceSettle(int seconds)
+        protected void ForceSettle(int seconds, bool clear = true)
         {
             if (seconds > 0)
             {
@@ -375,7 +376,7 @@ namespace AdaptiveGraphics.Systems
             {
                 throw new ArgumentException($"AdaptiveGraphicsSystem::ForceSettle Invalid argument {seconds}, must be >= 0");
             }
-            _fpsSamples.Clear();
+            if (clear) _fpsSamples.Clear();
             _timeSinceLastSettle.Restart();
         }
 
