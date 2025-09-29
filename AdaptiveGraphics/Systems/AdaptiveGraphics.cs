@@ -13,7 +13,7 @@ namespace AdaptiveGraphics.Systems
 {
     public class AdaptiveGraphicsSystem
     {
-        private static ICoreClientAPI capi;
+        protected readonly ICoreClientAPI capi;
         protected readonly AdaptiveGraphicsHud fpsHud;
         protected readonly DummyRenderer dummyRenderer;
         protected ModConfig config;
@@ -443,14 +443,13 @@ namespace AdaptiveGraphics.Systems
             capi.Event.BlockTexturesLoaded -= VerifyMaxViewDistance;
             capi.Event.UnregisterRenderer(dummyRenderer, EnumRenderStage.Done);
             dummyRenderer.Dispose();
-            capi = null;
         }
 
         /// <summary>
         /// Pause collection when is paused (singleplayer) or game is out of focus
         /// </summary>
         /// <returns></returns>
-        public static bool IsPaused()
+        public bool IsPaused()
         {
             if (!ClientProgram.screenManager.GamePlatform.IsFocused) return true;
             if (capi.IsGamePaused) return true;
@@ -505,6 +504,7 @@ Average time between adjustments: {adjustments.Select(x => x.Seconds).Average()}
 Increased Quality Count: {adjustments.Where(x => x.Direction > 0).Count()}
 Decreased Quality Count: {adjustments.Where(x => x.Direction < 0).Count()}
 Immediate Reversal Count: {immediateReversalCount}
+Outliers Trend Count: {confirmedOutliersTrendCount}
 -------------------------------------
 
 """);

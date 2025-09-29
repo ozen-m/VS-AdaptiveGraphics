@@ -25,9 +25,9 @@ Configurable by changing values in the provided config file `AdaptiveGraphics.js
 
 The next set of configurations are advanced settings, they are generally not changed unless you understand the changes
 - `FpsSampleDuration` - The duration (seconds) of the rolling window for average FPS, which will then compared against the Target FPS. Setting this lower cause more sudden changes, higher cause slower changes 
+- `AsymmetricPercentage` - Percentage to skew the Tolerance for the `TargetFPS`, setting this to `0` disables this. In effect, this makes reaction quicker when fps falls below the target, react conservatively when fps rises
 - `FpsTrendDuration` - The duration (seconds) to confirm a trend is sustained before an outlier FPS will be used in computing the average. Recommended is 3-5
 - `OutlierTolerance` - FPS is considered an outlier outside these bounds. This is multiplied to the average of the FPS sampled within the `FpsSampleDuration`
-- `AsymmetricPercentage` - Percentage to skew the Tolerance for the `TargetFPS`, setting this to `0` disables this. In effect, this makes reaction quicker when fps falls below the target, react conservatively when fps rises
 - `SettleInitial` - Wait period (seconds) to let the FPS settle before making adjustments initially on game start
 - `SettleAfterAdjust` - Wait period to let the FPS settle after making adjustments to the graphical settings
 - `SettleAfterPause` - Wait period to let the FPS settle after pausing. Used for external settings such as an external frame limiter in use when game is out of focus
