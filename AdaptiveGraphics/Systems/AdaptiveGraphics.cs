@@ -485,13 +485,16 @@ namespace AdaptiveGraphics.Systems
         public void ShowDebugStats()
         {
             if (fpsHistory.Count < 1 || adjustments.Count < 1) return;
-            var averageFps = fpsHistory.Average();
+            var meanFps = fpsHistory.Average();
+            var medianFps = Utils.GetMedian(fpsHistory);
             Utils.LogDebug($"""
 
 -------------------------------------
 Session Duration: {sessionWatch.Elapsed}
-Average FPS: {averageFps}
-Average Target Delta: {averageFps - config.TargetFPS}
+Mean FPS: {meanFps}
+Mean Target Delta: {meanFps - config.TargetFPS}
+Median FPS: {medianFps}
+Median Target Delta: {medianFps - config.TargetFPS}
 Min FPS: {fpsHistory.Min()}
 Max FPS: {fpsHistory.Max()}
 Time Near Target: {(timeNearTarget / (timeNearTarget + timeOutsideTarget)) * 100}% - {timeNearTarget / 1000f}s

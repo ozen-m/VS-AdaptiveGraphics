@@ -33,9 +33,22 @@ namespace AdaptiveGraphics
             return (value - tolerance, value + tolerance);
         }
 
-        public static bool IsWithin<T>(this T value, T min, T max) where T : IComparable<T>
+        public static int GetMedian(List<int> array)
         {
-            return value.CompareTo(min) >= 0 && value.CompareTo(max) <= 0;
+            if (array == null || array.Count == 0)
+            {
+                throw new ArgumentException("Cannot compute the median of an empty array");
+        }
+
+            var sortedArray = array.OrderBy(x => x).ToArray();
+            int count = sortedArray.Length;
+            int mid = count / 2;
+
+            if (count % 2 == 1)
+        {
+                return sortedArray[mid];
+            }
+            return (sortedArray[mid - 1] + sortedArray[mid]) / 2;
         }
 
         public static int GetFps(float deltaTime) => (int)(GetFps(1, deltaTime));
