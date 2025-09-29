@@ -40,7 +40,7 @@
       "weight": "1.4",
       "range": {
         "min": 2,
-        "max": 20
+        "max": 40
       }
     },
     {
@@ -182,11 +182,22 @@
       }
     },
     {
+      "code": "AsymmetricPercentage",
+      "comment": "AsymmetricPercentageComment",
+      "type": "float",
+      "default": 0.50,
+      "weight": "3.2",
+      "range": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    {
       "code": "FpsTrendDuration",
       "comment": "FpsTrendDurationComment",
       "type": "integer",
       "default": 3,
-      "weight": "3.2",
+      "weight": "3.3",
       "range": {
         "min": 2,
         "max": 15
@@ -197,7 +208,7 @@
       "comment": "OutlierToleranceComment",
       "type": "float",
       "default": 0.10,
-      "weight": "3.3",
+      "weight": "3.4",
       "range": {
         "min": 0.01,
         "max": 0.4
@@ -208,7 +219,7 @@
       "comment": "SettleInitialComment",
       "type": "integer",
       "default": 30,
-      "weight": "3.4",
+      "weight": "3.5",
       "range": {
         "min": 10,
         "max": 120
@@ -219,7 +230,7 @@
       "comment": "SettleAfterAdjustComment",
       "type": "integer",
       "default": 7,
-      "weight": "3.5",
+      "weight": "3.6",
       "range": {
         "min": 1,
         "max": 60
@@ -230,7 +241,7 @@
       "comment": "SettleAfterPauseComment",
       "type": "integer",
       "default": 0,
-      "weight": "3.6",
+      "weight": "3.7",
       "range": {
         "min": 0,
         "max": 30
@@ -241,7 +252,7 @@
       "comment": "SamplingIntervalIntervalComment",
       "type": "float",
       "default": 0.5,
-      "weight": "3.6",
+      "weight": "3.8",
       "range": {
         "min": 0.01,
         "max": 1

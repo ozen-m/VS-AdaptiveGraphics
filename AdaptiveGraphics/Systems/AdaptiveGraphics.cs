@@ -68,7 +68,8 @@ namespace AdaptiveGraphics.Systems
             _fpsSampleSize = (int)(config.FpsSampleDuration / config.SamplingInterval);
             _fpsTrendSize = (int)(config.FpsTrendDuration / config.SamplingInterval);
 
-            (_lowerFpsThreshold, _upperFpsThreshold) = Utils.GetBounds(config.TargetFPS, config.ToleranceFPS);
+            (_lowerFpsThreshold, _upperFpsThreshold) = Utils.GetBounds(config.TargetFPS, config.ToleranceFPS, config.AsymmetricPercentage);
+            Utils.LogDebug($"Set lower fps threshold {_lowerFpsThreshold} , upper fps threshold {_upperFpsThreshold}");
             _fpsSamples ??= new Queue<int>(_fpsSampleSize);
             _fpsOutliers ??= new List<int>(_fpsTrendSize);
             if (dummyRenderer != null)

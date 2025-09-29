@@ -1,6 +1,7 @@
 # Adaptive Graphics
 Automatically adjusts your graphics settings based on a desired target FPS! <br><br>
-**WARNING**: The mod is currently in its testing phase. Unexpected results, and instability may occur. User feedback is highly appreciated! <br><br>
+**WARNING**: The mod is currently in its testing phase. Unexpected results, and instability may occur. User feedback is highly appreciated!
+___
 This mod aims to improve your Vintage Story experience by changing graphical settings to achieve a user-set target FPS, in the hopes of achieving a smoother gameplay based on changing circumstances. Included features are:
 - Tracking of the game's Frames per Second to determine if certain settings should be decreased or increased
 - Completely configurable according to your preferences and hardware
@@ -9,7 +10,7 @@ This mod aims to improve your Vintage Story experience by changing graphical set
 
 ### Configuration
 Recommended to be configured with [Config Lib](https://mods.vintagestory.at/configlib) by [Maltiez](https://mods.vintagestory.at/show/user/8F414EAEC3CB95A80138). <br>
-Configurable by changing values in the provided config file `AdaptiveGraphics.json` inside `ModConfig` folder. <br><br>
+Configurable by changing values in the provided config file `AdaptiveGraphics.json` inside `ModConfig` folder. <br>
 - `TargetFPS` - The user desired FPS to achieve
 - `ShowFPS` - Shows a simple FPS indicator on the bottom left
 - `ToleranceFPS` - The lower/upper bounds of the target fps, dictates sensitivity to change
@@ -26,25 +27,24 @@ The next set of configurations are advanced settings, they are generally not cha
 - `FpsSampleDuration` - The duration (seconds) of the rolling window for average FPS, which will then compared against the Target FPS. Setting this lower cause more sudden changes, higher cause slower changes 
 - `FpsTrendDuration` - The duration (seconds) to confirm a trend is sustained before an outlier FPS will be used in computing the average. Recommended is 3-5
 - `OutlierTolerance` - FPS is considered an outlier outside these bounds. This is multiplied to the average of the FPS sampled within the `FpsSampleDuration`
+- `AsymmetricPercentage` - Percentage to skew the Tolerance for the `TargetFPS`, setting this to `0` disables this. In effect, this makes reaction quicker when fps falls below the target, react conservatively when fps rises
 - `SettleInitial` - Wait period (seconds) to let the FPS settle before making adjustments initially on game start
 - `SettleAfterAdjust` - Wait period to let the FPS settle after making adjustments to the graphical settings
 - `SettleAfterPause` - Wait period to let the FPS settle after pausing. Used for external settings such as an external frame limiter in use when game is out of focus
 - `SamplingInterval` - How often (seconds) FPS calculated and collected
 
 ### Known Issues
-- Flicker observed from the sky occurs when view distance is changed (limitation?)
+- Flicker observed from the sky occurs when view distance is changed (Limitation?)
 - Stutters when changing settings that requires a shader reload (SSAO Quality, Shadow Quality). These lessen eventually as the stutters hit hardest when initially reloading the shaders for the set quality
 
 ### Future Plans
 - Documentation
-- Asymmetric tolerance (react quickly when fps drops, react conservatively when fps rises)
 - Minimize oscillations if present
 - Configuration presets
 - Dynamic view distance steps
 - Environment aware (Caves, Below ground, Day/Night)
 - FPS Cap compatibility
 - Testing on different averaging methods
-- VRAM protection if the game provides the information
 
 #### Feedbacks, suggestions, and support are all welcome and appreciated! You can reach me in the Vintage Story discord server.
 

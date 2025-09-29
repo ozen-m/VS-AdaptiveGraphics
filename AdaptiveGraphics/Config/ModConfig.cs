@@ -29,6 +29,7 @@ public class ModConfig
 
     // --- Advanced ---
     public int FpsSampleDuration { get; set; } = 5; // seconds
+    public float AsymmetricPercentage { get; set; } = 0.5f; // percent
     public int FpsTrendDuration { get; set; } = 3; // seconds
     public float OutlierTolerance { get; set; } = 0.1f; // percent
     public int SettleInitial { get; set; } = 30; // seconds

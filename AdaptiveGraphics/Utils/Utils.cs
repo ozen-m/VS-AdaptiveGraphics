@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AdaptiveGraphics
 {
@@ -28,9 +29,9 @@ namespace AdaptiveGraphics
             return GetBounds(value, tol);
         }
 
-        public static (int outlierMin, int outlierMax) GetBounds(int value, int tolerance)
+        public static (int outlierMin, int outlierMax) GetBounds(int value, int tolerance, float asymmetry = 0)
         {
-            return (value - tolerance, value + tolerance);
+            return ((int)(value - (tolerance * (1 - asymmetry))), (int)(value + (tolerance * (1 + asymmetry))));
         }
 
         public static int GetMedian(List<int> array)
@@ -38,14 +39,14 @@ namespace AdaptiveGraphics
             if (array == null || array.Count == 0)
             {
                 throw new ArgumentException("Cannot compute the median of an empty array");
-        }
+            }
 
             var sortedArray = array.OrderBy(x => x).ToArray();
             int count = sortedArray.Length;
             int mid = count / 2;
 
             if (count % 2 == 1)
-        {
+            {
                 return sortedArray[mid];
             }
             return (sortedArray[mid - 1] + sortedArray[mid]) / 2;
